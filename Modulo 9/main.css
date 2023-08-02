@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;    
+    color: #fff;
+}
+
+body {
+    background-color: rgb(211, 140, 192);
+    padding-top: 100px;
+}
+
+header {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header img {
+    height: 36px;
+    margin-right: 16px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 56px;
+    justify-content: center;
+}
+
+form input {
+    font-size: 24px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid #fff;
+    padding: 8px;
+    margin-right: 12px;
+    color: rgb(255, 50, 187);
+}
+
+form input:focus {
+    outline: none;
+    border: 3px solid rgb(245, 77, 189);
+}
+
+form input::placeholder{
+    color: rgb(240, 127, 202);
+}
+
+form button {
+    background-color: rgb(245, 77, 189);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+hr {
+    border: 1px solid white;
+    max-width: 50%;
+    margin: auto;
+    margin-bottom: 24px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 25%;
+}
+
+ul li {
+    list-style: square;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
