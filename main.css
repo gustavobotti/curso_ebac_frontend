@@ -1,0 +1,65 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #4B0076 , #F26BBB);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 400px;
+    margin: 100px auto;
+    background: white;    
+    border: 3px solid rgb(50, 50, 50);
+    border-radius: 10px;
+}
+
+.container h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.container form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-bottom: 20px;
+}
+
+form .form-campo {
+    margin: 15px 0 15px 0;
+}
+
+.form-campo input {
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+}
+
+label {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+button {
+    height: 40px;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 50px;
+    font-size: 22px;
+    background: rgba(0, 0, 0, 0.925);
+    color: white;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}
