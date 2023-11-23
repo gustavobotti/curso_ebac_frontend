@@ -1,0 +1,15 @@
+@use '../config/variaveis';
+
+header {
+    background-color: variaveis.$corDeFundoHeader;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
