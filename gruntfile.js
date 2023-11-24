@@ -18,7 +18,7 @@ module.exports = function(grunt){
         },
         watch: {
             less: {
-                files: ['src/styles/**/*.less'],
+                files: ['src/styles/*.less'],
                 tasks: ['less:development']
             },
             html: {
