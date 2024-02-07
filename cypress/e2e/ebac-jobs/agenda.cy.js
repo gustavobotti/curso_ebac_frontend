@@ -2,39 +2,42 @@
 
 describe('Testes para a agenda de contatos', () => {
     beforeEach(() => {
-        cy.visit('https://agenda-contatos-react.vercel.app/')
-    })
+        cy.visit('https://agenda-contatos-react.vercel.app/');
+    });
     
     it('Testa a inclusão de um contato', () => {
         cy.get('input[type="text"]').type('gustavo botti');        
-        cy.get('input[type="email"]').type('gustavo@botti.com');   
-        cy.get('input[type="tel"]').type('32999444929');
+        cy.get('input[type="email"]').type('gustavo@botti');   
+        cy.get('input[type="tel"]').type('329994449');
 
         cy.get('button[type="submit"]').click();
 
         cy.contains('gustavo botti').should('be.visible');
 
-        cy.screenshot('tela-inscricao')
+        cy.screenshot('tela-inscricao');
+    });
+
+    it('Testa a alteração de um contato', () => {
+        cy.get('button[class="edit"]').first().click();
+        
+        cy.get('input[type="text"]').type(' editado');        
+        cy.get('input[type="email"]').type('.com');   
+        cy.get('input[type="tel"]').type('29');
+
+        cy.get('button[class="alterar"]').first().click();
+
+        cy.contains('gustavo botti editado').should('be.visible');
+        cy.contains('gustavo@botti.com').should('be.visible');
+        cy.contains('32999444929').should('be.visible');
+
+        cy.screenshot('tela-edicao');
     })
 
-    // it('Testa a alteração de um contato', () => {
-    //     cy.get('.Vaga_vagaLink__DeFkk').first().click()
-    //     cy.get('input[type="text"]').type('gustavo botti')
-    //     cy.get('input[name="email"]').type('gustavo@botti.com')
-    //     cy.get('input[name="telefone"]').type('32 9 1234-5678')
-    //     cy.get('input[name="endereco"]').type('Rua ABC n88, Bairro Cypress, Juiz de Fora - MG')
-    //     cy.get('#linux').check()
-    //     cy.get('select[name="escolaridade"]').select('outros')
-    //     cy.get('.Aplicacao_button__tw2AE').click()
+    it('Testa a remoção de um contato', () => {
+        cy.get('button[class="delete"]').first().click();
 
-    //     cy.on('window:alert', (conteudo) => {
-    //         expect(conteudo).contain('Obrigado pela candidatura!')
-    //     })
-    // })
+        cy.contains('Deletar').should('not.exist');
 
-    // it('Testa a remoção de um contato', () => {
-    //     cy.get('.Vaga_vagaLink__DeFkk').first().click()
-    //     cy.get('input').should('have.length', 7)
-    //     cy.screenshot('tela-inscricao')
-    // })
-})
+        cy.screenshot('tela-remocao');
+    });
+});
